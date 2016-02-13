@@ -1,12 +1,14 @@
 <div id='container' ng-controller='ShortenController'>
   <form name='shortenForm' ng-submit='addLink()' novalidate>
-    <input type="text" name="link"
+    <input type="url" name="link"
     class="link-input" 
     placeholder="new link" 
     ng-model="link.url">
     
   <button>submit</button>
   </form>
+
+  <p>{{shortenForm.link.$valid}}</p>
 </div>
 
 <!-- 
