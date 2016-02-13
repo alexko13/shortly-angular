@@ -7,6 +7,9 @@ angular.module('shortly.links', [])
     Links.getLinks()
     .then(function(res) {
       $scope.data.links = res.data;
+      // $scope.data.links = [];
+      // $scope.data.links[0] = 'Hello World';
+      // $scope.data.links[1] = '!!!!!!!';
     });
   };
 
