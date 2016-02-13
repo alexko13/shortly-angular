@@ -1,6 +1,29 @@
-<div id='container'>
-<!-- Your code here -->
-
+<div id='container' ng-controller='ShortenController'>
+  <form name='shortenForm' ng-submit='addLink()' novalidate>
+    <input type="text" name="link"
+    class="link-input" 
+    placeholder="new link" 
+    ng-model="link.url">
+    
+  <button>submit</button>
+  </form>
 </div>
 
-
+<!-- 
+  <form>
+      <input class='text' type='text' name='url'>
+      <input type='submit' value='Shorten'>
+  </form>
+  <img class='spinner' src='/spiffygif_46x46.gif'>
+  <div class='message'></div> 
+  -->
+  
+<!--   <div id='signup'>
+  <h1>signup</h1>
+  <form name="signupForm" ng-submit='signup()'>
+    <input type='text' ng-model='user.username'>
+    <input type="password" ng-model='user.password'>
+    <button>signup</button>
+  </form>
+  <a href="#/signin">Already have an account? <strong>Signin</strong> ...</a>
+</div> -->
