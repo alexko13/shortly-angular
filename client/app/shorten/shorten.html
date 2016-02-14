@@ -3,12 +3,18 @@
     <input type="url" name="link"
     class="link-input" 
     placeholder="new link" 
-    ng-model="link.url">
+    ng-model="link.url" required>
     
-  <button>submit</button>
+  <button type="submit" ng-disabled="shortenForm.$invalid">submit</button>
   </form>
-
-  <p>{{shortenForm.link.$valid}}</p>
+  <div ng-if="shortenForm.link.$error.required && shortenForm.$dirty">
+    <h2>Url required</h2>
+  </div>
+  
+  <div ng-show="shortenForm.link.$error.url && shortenForm.$dirty">
+    <h2>Not a valid url</h2>
+  </div>
+  <!-- <p>{{shortenForm.link.$valid}}</p> -->
 </div>
 
 <!-- 
